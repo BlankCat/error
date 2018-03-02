@@ -1,0 +1,30 @@
+
+搜素关键词
+tomcat startup.bat闪退
+
+1.在已解压的tomcat的bin文件夹下找到startup.bat，右击->编辑 在文件头加入下面两行：
+	SET JAVA_HOME=D:\Java\jdk1.6.0_10 （java jdk目录）
+	SET TOMCAT_HOME=E:\tomcat-6.0.35 （解压后的tomcat文件目录）
+
+
+2.同样的。在已解压的tomcat的bin文件夹下找到shutdown.bat，右击->编辑。在文件头加入下面两行：
+
+	SET JAVA_HOME=D:\Java\jdk1.6.0_10 （java jdk目录）
+	SET TOMCAT_HOME=E:\tomcat-6.0.35 （解压后的tomcat文件目录）
+
+3.将你要发布/部署的web文件复制到tomcat的webapps目录下。
+
+4.双击startup.bat即可启动tomcat，成功启动
+
+5.双击shutdown.bat即可停止tomcat。或者在已启动的tomcat窗口中直接ctrl+c也可停止tomcat。
+
+
+
+
+
+
+
+
+
+
+
