@@ -1,0 +1,197 @@
+
+
+管理员命令运行
+重置网络
+执行下面命令
+重启服务器
+
+最后找到原因了
+主要开着wifi访问助手
+
+
+netsh （进入设置模式） 
+netsh(Network Shell) 是一个windows系统本身提供的功能强大的网络配置命令行工具
+Winsock是Windows下网络编程的规范，
+
+
+
+
+
+netsh(Network Shell) 是一个windows系统本身提供的功能强大的网络配置命令行工具
+
+Microsoft Windows [版本 10.0.14393]
+(c) 2016 Microsoft Corporation。保留所有权利。
+
+C:\WINDOWS\system32>netsh winsocket reset
+找不到下列命令: winsocket reset。
+
+C:\WINDOWS\system32>netsh
+netsh>quit
+
+
+C:\WINDOWS\system32>netsh /?
+
+用法: netsh [-a AliasFile] [-c Context] [-r RemoteMachine] [-u [DomainName\]UserName] [-p Password | *]
+             [Command | -f ScriptFile]
+
+下列指令有效:
+
+此上下文中的命令:
+?              - 显示命令列表。
+add            - 在项目列表上添加一个配置项目。
+advfirewall    - 更改到 `netsh advfirewall' 上下文。
+branchcache    - 更改到 `netsh branchcache' 上下文。
+bridge         - 更改到 `netsh bridge' 上下文。
+delete         - 在项目列表上删除一个配置项目。
+dhcpclient     - 更改到 `netsh dhcpclient' 上下文。
+dnsclient      - 更改到 `netsh dnsclient' 上下文。
+dump           - 显示一个配置脚本。
+exec           - 运行一个脚本文件。
+firewall       - 更改到 `netsh firewall' 上下文。
+help           - 显示命令列表。
+http           - 更改到 `netsh http' 上下文。
+interface      - 更改到 `netsh interface' 上下文。
+ipsec          - 更改到 `netsh ipsec' 上下文。
+lan            - 更改到 `netsh lan' 上下文。
+mbn            - 更改到 `netsh mbn' 上下文。
+namespace      - 更改到 `netsh namespace' 上下文。
+netio          - 更改到 `netsh netio' 上下文。
+p2p            - 更改到 `netsh p2p' 上下文。
+ras            - 更改到 `netsh ras' 上下文。
+rpc            - 更改到 `netsh rpc' 上下文。
+set            - 更新配置设置。
+show           - 显示信息。
+trace          - 更改到 `netsh trace' 上下文。
+wcn            - 更改到 `netsh wcn' 上下文。
+wfp            - 更改到 `netsh wfp' 上下文。
+winhttp        - 更改到 `netsh winhttp' 上下文。
+winsock        - 更改到 `netsh winsock' 上下文。
+wlan           - 更改到 `netsh wlan' 上下文。
+
+下列的子上下文可用:
+ advfirewall branchcache bridge dhcpclient dnsclient firewall http interface ipsec lan mbn namespace netio p2p ras rpc trace wcn wfp winhttp winsock wlan
+
+若需要命令的更多帮助信息，请键入命令，接着是空格，
+后面跟 ?。
+
+C:\WINDOWS\system32>netsh winsock reset
+
+成功地重置 Winsock 目录。
+你必须重新启动计算机才能完成重置。
+
+
+C:\WINDOWS\system32>netsh int ip reset
+正在重置 全局，完成!
+正在重置 接口，完成!
+正在重置 单播地址，完成!
+正在重置 邻居，完成!
+正在重置 路径，完成!
+正在重置 ，失败。
+拒绝访问。
+
+正在重置 ，完成!
+重新启动计算机来完成此操作。
+
+
+C:\WINDOWS\system32>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

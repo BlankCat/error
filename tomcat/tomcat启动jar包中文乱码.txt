@@ -1,0 +1,62 @@
+
+
+http://fengbin2005.iteye.com/blog/1183723
+NFO: Pausing ProtocolHandler ["http-nio-9291"]
+java.lang.IllegalArgumentException
+	at java.util.zip.ZipInputStream.getUTF8String(ZipInputStream.java:317)
+	at java.util.zip.ZipInputStream.getFileName(ZipInputStream.java:436)
+	at java.util.zip.ZipInputStream.readLOC(ZipInputStream.java:255)
+	at java.util.zip.ZipInputStream.getNextEntry(ZipInputStream.java:82)
+	at java.util.jar.JarInputStream.getNextEntry(JarInputStream.java:130)
+	at java.util.jar.JarInputStream.getNextJarEntry(JarInputStream.java:167)
+	at org.apache.catalina.startup.ContextConfig$FragmentJarScannerCallback.scan(ContextConfig.java:2338)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:234)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:159)
+	at org.apache.catalina.startup.ContextConfig.processJarsForWebFragments(ContextConfig.java:1758)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1222)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:881)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:316)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:89)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5103)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:1033)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:774)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:1033)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEng
+
+
+
+启动tomcat时报错原因是：
+jar文件以ASCII格式上传到cvs服务器，然后下载的，这样jar文件就会被破坏，
+所以改为Binary格式上传，问题即可解决
+
+一般对比工具编码问题
+https://www.cnblogs.com/draem0507/archive/2013/04/15/3022287.html
+Beyond Compare 3中文乱码问题
+打开--工具-->文件格式-->名字-->编码
+ASCII
+
+
+方法二
+winrar工具--将class文件拽进去
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

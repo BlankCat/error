@@ -1,0 +1,26 @@
+
+eclipse validate xml slow
+问题解决
+https://stackoverflow.com/questions/7489510/disable-xml-validation-in-eclipse
+Window > Preferences > Validation > uncheck XML Validator Manual and Build 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
