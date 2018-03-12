@@ -1,0 +1,15 @@
+
+ios审核期间处理
+点睛首页，轮播展示
+https://devapi.zfwx.com/v3/global/home.json?domain=0&pageSize=16&pageNum=1&deviceinfo=iphone&appVersion=4.67
+
+点读首页接口
+https://devapi.zfwx.com/v3/listen/ldtHomePage.json?domain=0&deviceinfo=iphone&appVersion=4.64
+
+https://preapi.zfwx.com/v3/listen/ldtHomePage.json?domain=0&deviceinfo=iphone&appVersion=4.64
+
+老师课程列表接口
+https://devapi.zfwx.com/v3/listen/getTeacherCourseList.json?teacherId=115&pageNo=1&pageSize=16&deviceinfo=iphone&appVersion=4.67
+
+获取免费课程列表
+http://api.zfwx.com/v3/lisrea/getLisreaCoursesForPeople.json?access_token=6063f936607a43c8893ffca932ca46f1&domain=0&pageNo=1&pageSize=16&openSelect=3&deviceinfo=iphone&appVersion=4.67

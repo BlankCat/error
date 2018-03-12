@@ -1,0 +1,176 @@
+DomainType 定义了行业
+点睛地球首页聚合接口展示
+
+https://devapi.zfwx.com/v3/global/home.json
+https://devapi.zfwx.com/v3/global/home.json?domain=0
+
+http://api.zfwx.com/v3/global/home.json?domain=0
+
+
+
+文章详情
+http://api.zfwx.com/v3/listen/get_detail.json?access_token=f3f6c039a36e4f01913fd0dc0266a615&course_id=6616&img_type=1
+
+https://devapi.zfwx.com/v3/listen/get_detail.json?access_token=f3f6c039a36e4f01913fd0dc0266a615&course_id=952&img_type=1
+teachers
+
+
+https://devapi.zfwx.com/v3/lisrea/getMsgDesByType.json?msgType=app_message_sharecs
+
+》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
+动态审核接口
+动态审核登录
+https://devapi.zfwx.com/v3/auth/login.json?deviceinfo=Phone_OS4.2&j_password=12345678&version=4.13&j_username=747343&choose_domain=0&channelId=4234797702431134782&appid=2b06f1c03db9402eaa945b2716c45a7a
+
+机构动态业务serviceId=37
+
+审核状态lisreaStatus：== 1:待审/2:通过/3:未过/5:推荐/-1:删除
+
+机构动态审核列表接口
+https://devapi.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=b71a68fcfba944cc84b8fa6bd56974c3&pageNo=1&lisreaStatus=0&domain=0&pageSize=15&updateTimeOrder=DESC&serviceId=37
+
+https://devapi.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=b71a68fcfba944cc84b8fa6bd56974c3&pageNo=1&lisreaStatus=2&domain=0&pageSize=15&updateTimeOrder=DESC&serviceId=37
+
+机构动态审核详情接口
+https://devapi.zfwx.com/v3/lisrea/getNoticeDetial.json?access_token=b71a68fcfba944cc84b8fa6bd56974c3&noticeId=6
+
+机构动态修改状态（审核通过，拒绝，推荐）
+https://devapi.zfwx.com/v3/lisrea/changeLisreaStatus.json?access_token=39dd0cec9ad646db997894d3039344d0&serviceId=37&comIds=6&lisreaStatus=3
+
+
+http://api.zfwx.com/v3/auth/login.json?deviceinfo=Phone_OS4.2&j_password=12345678&version=4.13&j_username=747343&choose_domain=0&channelId=4234797702431134782&appid=2b06f1c03db9402eaa945b2716c45a7a
+
+http://api.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=b71a68fcfba944cc84b8fa6bd56974c3&pageNo=1&lisreaStatus=0&domain=0&pageSize=15&updateTimeOrder=DESC&serviceId=37
+
+http://api.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=50dfd5f7e3c84845afb24d519d33b137&pageNo=1&lisreaStatus=3&domain=0&pageSize=15&updateTimeOrder=DESC&serviceId=37
+
+
+
+
+
+
+
+
+
+
+》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
+面授审核接口
+登录获取token
+https://devapi.zfwx.com/v3/auth/login.json?deviceinfo=Phone_OS4.2&j_password=12345678&version=4.13&j_username=747343&choose_domain=0&channelId=4234797702431134782&appid=2b06f1c03db9402eaa945b2716c45a7a
+
+//面授列表
+https://devapi.zfwx.com/v3/lisrea/listActivity.json?access_token=6438fb2ab4dd4d5f9d5d8952dd238d07&activityStatus=2&pageNo=1&pageSize=10&addTimeOrder=DESC
+
+
+//面授详情
+https://devapi.zfwx.com/v3/lisrea/getActivityDetial.json?access_token=6438fb2ab4dd4d5f9d5d8952dd238d07&activityId=11
+
+//修改面授
+
+
+
+
+
+
+
+获取分享消息内容
+https://devapi.zfwx.com/v3/lisrea/getMsgDesByType.json?msgType=app_message_sharecs
+
+
+
+1.获取分类 https://devapi.zfwx.com/v3/lisrea/getCategorys.json?access_token=a3a58d3cb751468f8ee74f2aa7034e54&domain=0
+
+
+面授审核人员账号密码
+https://devapi.zfwx.com/v3/auth/login.json?deviceinfo=Phone_OS4.2&j_password=12345678&version=4.13&j_username=747343&choose_domain=0&channelId=4234797702431134782&appid=2b06f1c03db9402eaa945b2716c45a7a
+
+面授审核
+https://devapi.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=b71a68fcfba944cc84b8fa6bd56974c3&pageNo=1&lisreaStatus=0&domain=0&pageSize=15&updateTimeOrder=DESC&serviceId=33
+
+
+
+
+
+
+
+https://devapi.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=b71a68fcfba944cc84b8fa6bd56974c3&pageNo=1&lisreaStatus=3&domain=0&pageSize=15&updateTimeOrder=DESC&serviceId=33
+
+
+点读评论审核
+https://devapi.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=81cd22727e034969bee25774d92638a4&pageNo=1&lisreaStatus=2&domain=0&pageSize=15&updateTimeOrder=DESC&serviceId=34
+
+
+
+6.获取用户上传课程列表 https://devapi.zfwx.com/v3/lisrea/getLisreaCourses.json‘
+
+https://devapi.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=7a78e96f55524510a8dc9830f3038288&pageNo=1&lisreaStatus=2&domain=0&pageSize=15&updateTimeOrder=DESC
+	access_token
+	pageNo=1(必填)
+	domain＝０(必填)
+	pageSize=10(必填)
+	lisreaStatus=1
+	csName=%E7%94%B5
+	numberOrder=ASC
+	addTimeOrder=ASC
+	originalPriceOrder=DESC
+
+
+ https://devapi.zfwx.com/v3/lisrea/changeLisreaStatus.jsonaccess_token=46fa544801cd4fd2b2f0f717d0ccc4aa&comIds=279&lisreaStatus=1&serviceId=33
+
+7.修改课程状态 https://devapi.zfwx.com/v3/lisrea/changeLisreaStatus.json?access_token=6626052bff364834a03a48926a55b8f8&comIds=4290&lisreaStatus=8
+	comIds=4164
+	lisreaStatus=-1 删除
+	ORIGIN_STATUS(1, "草稿"),//保存用户文章
+	WATING_STATUS(2, "审核中"),//用户点击发布
+	REFUSE_STATUS(4, "拒绝"),//审核拒绝
+	OPEN_STATUS(8, "已发布"),//审核通过
+	CLOSE_STATUS(7, "已下线");//用户点击下线
+
+8.获取课程详情 https://devapi.zfwx.com/v3/lisrea/LisreaCourseDetail.json?access_token=6626052bff364834a03a48926a55b8f8&courseId=4290
+
+
+9.文章修改 https://devapi.zfwx.com/v3/lisrea/updateLisreaCourse.json?access_token=20c4f96cd4d94651a72563e5e726c5e8&lisreaStatus=2&
+var djCourse = {
+                "csName"       : $scope.cgData.cgTitle,     //文章标题
+                "categoryId"   : $scope.cgData.cgId,        //文章分类
+                "csImg"        : $scope.cgData.csImg,       //封面图片
+                "courseTag"    : $scope.cgData.cgTag,       //文章标签
+                "csInfo"       : $scope.cgData.arcCata,     //文章目录
+                "csPrice"      : $scope.cgData.cgMey,       //文章点币价格
+                "csOriginalprice" : $scope.cgData.cgMey,    //文章首读现金价格
+                "csDiscountprice" : 2,                      //文章跟读现金价格
+                "lisreaStatus" : lisreaStatus,              //文章状态 
+                "tchMajor"     : cgExpert,                  //作者擅长领域
+                "cwInfo"       : $scope.cgData.ngContent,   //文章内容
+                "csIsdisplay"  : $scope.cgData.csIsdisplay, //同步点读
+                "csSummary"    : $scope.cgData.ngSyn,       //文章简介
+                "csKs"         : 0,
+                "masterName"   : author,                    //作者名字
+                "masterPhoto"  : $scope.cgData.masterPhoto, //作者头像
+                "teacherSmpsList1" : otherauther
+            }
+10.登录 https://devapi.zfwx.com/v3/auth/login.json?j_username=299797&j_password=12345678&deviceinfo=iPhone_IOS6.0&appid=%2014ec43115bc6310a47e492858f419636&version=4.33
+
+
+
+
+-----转到支付页面！----reurl=http://www.zfwx.com:80/member/payment/toPayAfter.do?orderId=CZ-144648-1-1B8O5SA8F0W&amount=1&bankType=weixin&url=null----------order=com.zfwlxt.util.DjKuaiQianOrder@5e54a99b--转到微信支付页面！--order=com.zfwlxt.util.DjKuaiQianOrder@5e54a99b--------------session中标志设置为0待支付--out_trade_no=CZ-144648-1-1B8O5SA8F0W--------
+------------requestXML=<xml><appid>wx0b0b895104e47cae</appid><body><![CDATA[在线充值]]></body><mch_id>1429666802</mch_id><nonce_str>51fd081fb2f037078fc8a4e037daabe4</nonce_str><notify_url>http://devzf.zfwx.com/wxqt/wxpayNotify.do</notify_url><out_trade_no>CZ-144648-1-1B8O5SA8F0W</out_trade_no><sign><![CDATA[759AF276AD7EE5CA87EEFA256740DACC]]></sign><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>NATIVE</trade_type></xml>
+--------------resXml=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx0b0b895104e47cae]]></appid>
+<mch_id><![CDATA[1429666802]]></mch_id>
+<nonce_str><![CDATA[m3EwDfSrcFI39upT]]></nonce_str>
+<sign><![CDATA[F84B799CAE5A9A0A84326398E4735002]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20170212112921f2f08ccb6b0776738429]]></prepay_id>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<code_url><![CDATA[weixin://wxpay/bizpayurl?pr=O57Miqy]]></code_url>
+</xml>
+
+------------urlCodeweixin://wxpay/bizpayurl?pr=O57Miqy
+
+
+
+
+http://api.zfwx.com/v3/listen/ldtHomePage.json?domain=0

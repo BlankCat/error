@@ -1,0 +1,11 @@
+
+	获取文章分类
+	http://www.zfwx.com/wxgr/stu/getCat.do
+	http://www.zfwx.com/wxgr/stu/getCat.do?cg_belong=1
+
+	根据课程分类查询购买课程接口
+	http://www.zfwx.com/wxgr/stu/getStucws.do?pageNo=1&pageSize=10&stucwStatus=&cgids=1015,1035
+
+
+	根据课程录制时间查询课程
+	http://www.zfwx.com/wxqt/FindCourseByConditions.do?condition=transcribeTime&transcribeTime=2017&pageNo=1&PageSize=100

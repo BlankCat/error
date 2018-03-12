@@ -1,0 +1,13 @@
+点读文章详情接口
+https://devapi.zfwx.com/v3/listen/get_detail.json?access_token=ed26e03744304b2882d750b841258a1a&course_id=4418&img_type=2
+
+零元购买接口
+https://devapi.zfwx.com/v3/listen/buyZeroCourse.json?access_token=ed26e03744304b2882d750b841258a1a&courseId=4418&domain=2
+
+
+点读地球也聚合
+LawyerFirmController
+
+
+点视课展示
+https://devapi.zfwx.com/v2/study/get_detail.json?access_token=79e2476abd344e55800578d6d5ef3e2e&course_id=2235&img_type=2&domain=0

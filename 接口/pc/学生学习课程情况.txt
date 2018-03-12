@@ -1,0 +1,142 @@
+
+
+
+新的接口调用
+学生学习情况统计
+http://www.zfwx.com/xhht/pageOfStuCourseStatic.do?pageNo=1&pageSize=10&mem_id=10538
+学生学习进度统计
+http://www.zfwx.com/xhht/pageOfStuCourseDescStatic.do?pageNo=1&pageSize=10&mem_id=10538&course_id=1221
+
+
+
+
+=====================================================================================
+
+
+学生学习情况统计
+http://admin.zfwx.com/society/DjList/courseList.do?memId=10538
+
+SELECT m.mem_id,m.mem_username,m.mem_name,
+cou.cs_name,cou.cs_hour,cou.course_id,
+stu.sc_totaltime,(stu.sc_totaltime /cou.cs_hour),stu.sc_times,stu.sc_status,stu.sc_id
+FROM dj_member AS m,dj_stucourse AS stu,dj_course as cou
+WHERE m.mem_id=stu.mem_id and cou.course_id=stu.course_id 
+ and m.mem_id=10538
+LIMIT 10
+
+
+SELECT m.mem_id,m.mem_username,m.mem_name,cou.cs_name,cou.cs_hour,cou.course_id,stu.sc_totaltime,(stu.sc_totaltime /cou.cs_hour) as progress ,stu.sc_times,stu.sc_status,stu.sc_id
+FROM dj_member AS m,dj_stucourse AS stu,dj_course as cou
+WHERE m.mem_id=stu.mem_id and cou.course_id=stu.course_id 
+ and m.mem_id=10538
+LIMIT 10
+
+
+SELECT 
+count(*)
+FROM dj_member AS m,dj_stucourse AS stu,dj_course as cou
+WHERE m.mem_id=stu.mem_id and cou.course_id=stu.course_id 
+ and m.mem_id=10538
+
+
+
+
+StuCourseStatic
+StuCourseDescStatic
+
+
+
+DjMember
+private Long memId;
+private String memUsername;
+private String memName;
+
+DjCourse
+private Long courseId; 
+private String csName;
+private Float csHour;
+
+DjStuCourse
+private Long scId;
+private Float scTotaltime;
+private Integer scTimes;
+private Byte scStatus;
+private Dobule progress;
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+ 学生学习进度统计
+ http://admin.zfwx.com/society/DjList/historyList.do?courseId=1223&userId=10538
+
+
+SELECT 
+ m.mem_username,m.mem_name,
+ cou.cs_name,cw.cw_name,cw.cw_hour
+,(stu.stucw_totaltime/cw.cw_hour),
+stu.stucw_totaltime,
+stu.stucw_times,stu.stucw_starttime,stu.stucw_endtime,stu.stucw_status,
+m.mem_id,cou.course_id,stu.stucw_id ,stu.stucourse_id,cw.cw_id 
+
+FROM dj_member AS m,dj_stucw AS stu,dj_course as cou,dj_courseware as cw ,dj_stucourse as stucd
+
+WHERE m.mem_id=stu.mem_id and cw.cw_id=stu.cw_id and cou.course_id=cw.course_id and stucd.sc_id=stu.stucourse_id 
+
+and cou.course_id=1221 and m.mem_id=10538
+LIMIT 5
+
+
+
+
+SELECT m.mem_username,m.mem_name,cou.cs_name,cw.cw_name,cw.cw_hour,(stu.stucw_totaltime/cw.cw_hour) as progress ,stu.stucw_totaltime,stu.stucw_times,stu.stucw_starttime,stu.stucw_endtime,stu.stucw_status,m.mem_id,cou.course_id,stu.stucw_id ,stu.stucourse_id,cw.cw_id FROM dj_member AS m,dj_stucw AS stu,dj_course as cou,dj_courseware as cw ,dj_stucourse as stucd
+WHERE m.mem_id=stu.mem_id and cw.cw_id=stu.cw_id and cou.course_id=cw.course_id and stucd.sc_id=stu.stucourse_id 
+and cou.course_id=1221 and m.mem_id=10538
+LIMIT 5
+
+SELECT 
+count(*)
+FROM dj_member AS m,dj_stucw AS stu,dj_course as cou,dj_courseware as cw ,dj_stucourse as stucd
+WHERE m.mem_id=stu.mem_id and cw.cw_id=stu.cw_id and cou.course_id=cw.course_id and stucd.sc_id=stu.stucourse_id 
+and cou.course_id=1221 and m.mem_id=10538
+
+
+
+DjMember
+private String memUsername;
+private String memName;
+
+DjCourse
+private Long courseId; 
+private String csName;
+
+DjCourseware
+private Long cwId;
+private String cwName;
+private Float cwHour;
+
+
+DjStucw
+private Long stucwId;
+private Float stucwTotaltime;
+private Integer stucwTimes;
+private Date stucwStarttime;
+private Date stucwEndtime;
+private Integer stucwStatus;
+
+private Dobule progress;
+
+
+
+ <select id="selectByHsqlBackList" resultMap="SmpResultMap" >
+    ${paramSQL}
+  </select>
+  <select id="selectByHsqlBackCount"  resultType="java.lang.Integer">
+    ${paramSQL}
+  </select>

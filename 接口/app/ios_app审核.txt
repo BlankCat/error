@@ -1,0 +1,39 @@
+﻿
+	private static String deviceFlag = PropertiesConfigUtil.getProperty("deviceFlag");
+	private static String oldIosAppVersion = PropertiesConfigUtil.getProperty("iosAppVersion");
+	private static boolean iosAppIsCheck = PropertiesConfigUtil.getPropertyBoolean("iosAppIsCheck");
+	
+
+
+
+		//ios审核管理控制
+		String deviceinfo = ServletActionContext.getRequest().getParameter("deviceinfo");
+		String newIosAppVersion = ServletActionContext.getRequest().getParameter("appVersion");
+		float oldV=Float.parseFloat(oldIosAppVersion);//旧版本号
+		float newV=0f;//新版本号
+		if(null!=deviceinfo&&null!=newIosAppVersion){
+			newV=Float.parseFloat(newIosAppVersion);
+		}
+		if(!iosAppIsCheck){//不是审核期//System.out.println("非审核期间");
+			
+		}else{//审核期间,新版
+			if(null!=deviceinfo){//有设备号，只有iphone
+				if(deviceFlag.equals(deviceinfo)&&newV>oldV){//System.out.println("审核期间");
+					
+				}
+			}else{//审核期间，android设备正常显示
+				
+			}
+		}
+		
+
+
+
+
+		String payType=null;
+		if(iosAppIsCheck){
+			if(null!=deviceinfo&&deviceFlag.equals(deviceinfo)&&newV>oldV){//System.out.println("审核期间");
+				payType="0";//取免费课
+			}
+		}
+		

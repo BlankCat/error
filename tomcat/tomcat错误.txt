@@ -1,0 +1,96 @@
+
+Tomcat发布项目去掉端口和项目名
+http://blog.csdn.net/baohuan_love/article/details/14225141
+
+https://www.cnblogs.com/ljy-1471914707/p/5866096.html
+http://www.cnblogs.com/quxuedan/archive/2012/12/11/2813445.html
+
+
+高版本JDK编译的class不能在低版本的jvm虚拟机下运行，否则就会报这类错
+
+java -version看一下你运行的jvm是什么版本的jdk，然后在你的eclipse里面把jdk改成对应的版本重新compile
+javaee 版本问题
+blog/servlet/AppServerListener : Unsupported major.minor version 52.0 (unable to load class com.elephantgroup.blog.servlet.AppServerListener)
+
+
+
+
+
+关于java.lang.UnsupportedClassVersionError解决方法总结
+原创 2015年12月08日 17:23:36 标签：jdk1.7 /jdk1.8 /服务器 /Java 7462
+今天在把本地项目像服务器部署的时候报错java.lang.UnsupportedClassVersionError，我本地用的JDK1.8，服务器是1.7的JDK，所以报这个错误，我又重新在本地安装了JDK1.7，重新编译后上传，问题解决。在这做个记录。
+此问题一般出现在高版本JDK向底版本JDK转换的时候。
+解决方法：
+---------------------------------------------------------------------
+1、右键你的项目，Build Path ->configure Build Path 选择需要更换的JDK。
+
+2、右键你的项目，找到Java Compiler 选择适当的JDK。
+
+3、右键你的项目，properties->Java Compiler，选择合适的JDK版本，一般跟你安装的JDK版本相同就OK。
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+基本上就大工告成了。
+
+
+
+
+
+3、右键你的项目，properties->project Facets
+解决Cannot change version of project facet Dynamic web module to 2.5
+http://blog.csdn.net/steveguoshao/article/details/38414145
+
+其实在右边可以看到改到2.5需要的条件以及有冲突的facets，解决这个问题的步骤如下：
+1.把Servlet改成2.5，打开项目的web.xml，改之前：
+
+.修改项目的设置，在Navigator下打开项目.settings目录下的org.eclipse.jdt.core.prefs
+
+
+把1.5改成1.6
+
+
+打开org.eclipse.wst.common.component
+
+把project-version="1.5.0"改成project-version="1.6.0"
+
+
+打开org.eclipse.wst.common.project.facet.core.xml
+
+
+都改好之后在打开看看，已经把Dynamic web module改成了2.5
+
+
+
+
+
+
+
+eclipse 使用Tomcat 部署web项目找不到lib中的类文件
+http://blog.csdn.net/zjck1995/article/details/52700975
+
+
+
+Java中Access restriction：····的解决方法
+问题原因：Eclipse 默认把这些受访问限制的API设成了ERROR
+ 
+解决方法：
+1.      Windows-> Preferences -> Java -> Compiler -> Errors/Warnings ->Deprecatedand trstricted API -> Forbidden reference (access rules): -> change towarning
+2.      只需要在projectbuild path中先移除JRESystem Library，再添加库JRESystem Library，重新编译后就一切正常了。
+3.      工程上右键->工程属性->javabuilder path->Libraries标签，点击JRE SystemLibrary里面的Accessrules，addsun/** 为accessible，如果该项存在，就edit。
+4.      Windows-> Preferences -> Java -> Installed JREs -> 选择用的JDK-> Edit -> Add External JARs
+ 
+测试结果（MyEclipse）：
+     解决方法1可行
+
+
+
+
+
+Server Tomcat v8.0 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
+
+
+
+https://github.com/Javen205/SSM
+http://www.cnblogs.com/zyw-205520/p/4771253.html
+
+
+
+

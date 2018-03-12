@@ -1,0 +1,29 @@
+select * from cas_account where username = "dianjingkefu"
+
+select * from cas_account where account_id = 416522
+
+select * from   from dj_user_purse where account_id = 416522 and  purse_type =36;
+
+
+SELECT 60 as fansnum , 	dtch.teacher_id,dtch.tch_name,dtch.tch_photo,dtch.tch_smallphoto,dtch.tch_note  
+FROM  dj_teacher  dtch 
+WHERE tj_order>0 order by  tj_order LIMIT 5
+
+
+
+
+
+插入语句--查询结果作为插入的条件
+INSERT INTO dj_advertising
+	(ad_title, ad_summary, ad_position, ad_img, ad_order, ad_status, ad_url, ad_color, 	domain)
+ SELECT 
+	ad_title, ad_summary, 54, ad_img, ad_order, ad_status, ad_url, ad_color, domain     FROM dj_advertising 
+ WHERE ad_position=51
+
+
+巧用like
+select id from table where left(flag,1)='1'
+select id from table where flag like '1%'
+
+
+数据库查询是NULL就是空，啥也没有是"" 后台校验的时候需要注意

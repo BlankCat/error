@@ -1,0 +1,18 @@
+动态审核接口
+动态审核登录
+https://devapi.zfwx.com/v3/auth/login.json?deviceinfo=Phone_OS4.2&j_password=12345678&version=4.13&j_username=747343&choose_domain=0&channelId=4234797702431134782&appid=2b06f1c03db9402eaa945b2716c45a7a
+
+机构动态业务serviceId=37
+
+审核状态lisreaStatus：== 1:待审/2:通过/3:未过/5:推荐/-1:删除
+
+机构动态审核列表接口
+https://devapi.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=b71a68fcfba944cc84b8fa6bd56974c3&pageNo=1&lisreaStatus=0&domain=0&pageSize=15&updateTimeOrder=DESC&serviceId=37
+
+https://devapi.zfwx.com/v3/lisrea/getLisreaCourses.json?access_token=b71a68fcfba944cc84b8fa6bd56974c3&pageNo=1&lisreaStatus=2&domain=0&pageSize=15&updateTimeOrder=DESC&serviceId=37
+
+机构动态审核详情接口
+https://devapi.zfwx.com/v3/lisrea/getNoticeDetial.json?access_token=b71a68fcfba944cc84b8fa6bd56974c3&noticeId=6
+
+机构动态修改状态（审核通过，拒绝，推荐）
+https://devapi.zfwx.com/v3/lisrea/changeLisreaStatus.json?access_token=39dd0cec9ad646db997894d3039344d0&serviceId=37&comIds=6&lisreaStatus=3

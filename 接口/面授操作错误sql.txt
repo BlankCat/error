@@ -1,0 +1,34 @@
+
+查找报名状态
+select
+		s.status
+		from dj_activity_signup s,dj_activity_order_item o
+		where s.signup_id = o.signup_id and o.username="testset13"
+		and s.activity_id=440 and s.status!=2 limit 1
+
++--------+
+| status |
++--------+
+|      0 |
++--------
+
+
+mysql> select
+    -> s.signup_id
+    -> from dj_activity_signup s,dj_activity_order_item o
+    -> where s.signup_id = o.signup_id and o.username="testset13"
+    -> and s.activity_id=440 and s.status!=2 limit 1
+    -> ;
++-----------+
+| signup_id |
++-----------+
+|      8791 |
++-----------+
+
+
+根据signup_id查询订单明细
+
+
+更新订单面授名称
+
+

@@ -1,0 +1,33 @@
+问题反馈
+
+	添加字段
+	re_content 回复内容
+	问题反馈
+	/society/DjOrgQuestion/save.do
+	dj_org_question
+
+
+协会后台改版
+
+账号：sysadmin
+密码：1-8
+打开链接，老的接口
+http://admin.zfwx.com/society/index.jsp
+
+
+登入后台，统计反馈--问题反馈（做上传问题审核管理）
+账号：kjbtest1
+密码：1-8
+
+
+1save
+发布问题接口
+2update
+问题修改接口
+
+3find 分页加载
+获取问题列表接口
+已处理问题接口
+
+
+
