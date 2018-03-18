@@ -1,0 +1,26 @@
+
+
+
+stackoverflow.com
+
+https://stackoverflow.com/questions/43548522/android-constraint-layout-installation
+android constraint layout installation
+
+
+install failed com.android.support.constraint:constraint-layout:1.0.2
+
+
+AndroidStudio2.x
+
+
+bulid.gradle 文件，添加组件依赖
+repositories {
+    maven {
+        url 'https://maven.google.com'
+    }
+}
+
+compile 'com.android.support.constraint:constraint-layout:1.0.2'
+compile 'com.android.support.constraint:constraint-layout-solver:1.0.2'
+
+
