@@ -1,0 +1,103 @@
+
+wxsy_service
+
+   <!-- 2018-03-19 定时器配置 -->
+    <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context-support</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+
+
+	   <!-- 2018-03-19 定时器配置 -->
+    <!-- Quartz framework -->
+	<dependency>
+		<groupId>org.quartz-scheduler</groupId>
+		<artifactId>quartz</artifactId>
+		<version>2.2.2</version>
+	</dependency>
+
+	spring-schedule.xml
+
+	任务配置文件
+	定时扫描
+
+	点币即将到期（29）
+	过过期点币已清零
+	个人中心增加点币额数提醒
+	点同宝会员即将到期（29）
+	点同宝会员到期，续费提醒
+	听课截至日期提示29天
+	课时完成时，还有29天截至，还差多少课时，提示
+
+
+
+
+djChat_service
+分布式事务
+com.atomikos.jdbc.AtomikosDataSourceBean
+
+DjLisreaDivideServiceImpl
+@Resource(name="jtaTransactionManager")
+private JtaTransactionManager txManager;
+
+  
+  public int divideForLDT(DjshTransaction djshTransaction, Long accountId)
+  {
+ 	UserTransaction userTx = this.txManager.getUserTransaction();
+    try
+    {
+	     开始分布式业务
+	 	  userTx.begin();
+
+	 	  	处理分层业务...
+	 	  	多个数据源，保证事务一致性...
+
+
+  		处理分布式业务
+      userTx.commit();
+    }catch (IllegalStateException e1)
+      {
+        System.out.println("IllegalStateException:" + e1.getMessage());
+      }
+      catch (SecurityException e1)
+      {
+        System.out.println("SecurityException:" + e1.getMessage());
+      }
+      catch (SystemException e1)
+      {
+        System.out.println("SystemException:" + e1.getMessage());
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
