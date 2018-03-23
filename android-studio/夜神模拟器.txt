@@ -1,0 +1,27 @@
+
+
+android studio 链接夜神模拟器
+nox_adb.exe connect 127.0.0.1:62001 
+
+相信很多android开发者都会遇到这样的问题。
+
+1、需要不同分辨率的手机，成本好高啊。
+
+2、USB连接线不稳，总是容易断开，重新连接。
+
+那么，请使用夜神模拟器来辅助开发，高效、稳定。intellij idea 及 eclipse也适用
+
+1、通过android studio新建自己的工程，具体步骤就不谈了，详细请看连接：https://www.yeshen.com/faqs/BJMsNkXxb；
+
+2、下载并安装夜神模拟器，夜神模拟器官网下载 www.yeshen.com；
+
+3、先启动夜神模拟器，然后运行cmd命令，cd到夜神安装目录，执行命令：nox_adb.exe connect 127.0.0.1:62001 连接到模拟器；
+
+
+
+HTTP 协议访问网络
+http://blog.csdn.net/a184477587/article/details/50827912
+安卓网络开发之http协议的概述（学习安卓网络编程语言的学习心得）
+http://blog.csdn.net/u012249132/article/details/38405357
+怎样使用HTTP协议访问网络
+http://blog.csdn.net/a18237158067/article/details/51404189
