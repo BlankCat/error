@@ -1,0 +1,149 @@
+
+
+
+
+系统资源加载机制
+
+深度链接
+js判断移动端是否安装某款app的多种方法
+http://www.jb51.net/article/76585.htm
+
+
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+android();
+ 
+if(isAndroid){
+      function android(){
+        window.location.href = "openwjtr://com.tyrbl.wjtr"; /***打开app的协议，有安卓同事提供***/
+        window.setTimeout(function(){
+           window.location.href = "http://www.wjtr.com/download/index.html"; /***打开app的协议，有安卓同事提供***/
+        },2000);
+      };
+
+
+IPC inter-process communication 进程之间的通讯
+
+同一应用多进程
+不同应用多进程
+ContentProvider跨进程查询数据通信
+
+开启多进程
+android:process
+
+JNI 在native去froke
+默认进程名称是包名
+
+
+查看进程状态
+DDMS查看
+adb shell
+ps | grep 包名
+
+私有进程   android:process=":remote"
+全局进程    android:process="com.dj.zfwx.client.activity_2.remote"
+
+运行在不同进程之间的4大组件，通过内存来共享数据就会失败
+
+
+进程之间通讯
+Intent传数据
+共享文件
+SharePreference
+基于Binder的Messenger
+AIDL
+Socket
+-------------
+Serializable
+Parcelable
+Binder
+-----------
+Intent和Binder 
+传递数据需要实现序列化
+
+数据序列化
+持久化到设备上或者
+传递给其他客户端
+
+--------
+Binder 实现接口IBinder是Android实现跨进程通讯的方式
+虚拟的物理设备
+驱动/dev/binder
+
+从Android Framework角度
+Binder是ServiceManager链接各种Manager（ActivityManager，WindowManager）和ManagerService的桥梁
+
+从Android应用层 
+Binder是客户端和服务端通信的媒介
+当bindService，服务端会返回一个包含服务端业务调用的Binder对象，
+通过Binder对象，客户端可以获取服务端的服务数据，
+这里的服务包括普通的服务和基于AIDL的服务
+
+Binder主要在 Service
+包括AIDL和Messenger
+Service中的Binder不包括进程之间通信，比较简单
+Messenger的底层是AIDL,分析AIDL分析Binder工作机制
+
+--------
+Bundle实现Parcelable接口
+IntentService 实现后台计算，然后跳转到目标组件
+
+--------
+共享文件实现进程通信
+SD卡的一个文件
+
+--------
+SharedPreference 
+/dada/data/pak name/shared_prefs
+--------
+Messenger 轻量级的IPC方案
+发送Message 对象
+它的底层是AIDL，怼AIDL的封装
+--------
+AIDL支持的数据类型
+
+--------
+ContentProvider底层也是Binder 
+<provider
+android:authorities="com.dj.zfwx.client.activity.bdpush"
+authorities必须唯一
+android:readPermission 读权限
+android:writePermission 写权限
+
+--------
+使用套接字Socket，实现进程调用
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
